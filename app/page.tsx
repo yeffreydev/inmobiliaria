@@ -16,7 +16,7 @@ const Page: React.FC = () => {
       </div>
       {isMenuOpen && (
         <div
-          className="pl-[65px] flex flex-col gap-5 justify-center text-white  bg-[#131645] bg-opacity-90 w-3/12 h-screen fixed z-10"
+          className="pl-[65px] flex flex-col gap-5 justify-center text-white  bg-[#131645] bg-opacity-90 md:w-6/12 w-full lg:w-3/12 h-screen fixed z-10"
           id=""
         >
           <ul className="flex flex-col gap-5">
@@ -41,8 +41,8 @@ const Page: React.FC = () => {
       )}
       {/* Header */}
       <header className="bg-blue-900 text-white py-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">
+        <div className="lg:px-10 px-3 mx-auto flex justify-between items-center">
+          <div className="">
             <Image
               src="/logo-white.svg"
               alt="ACCON Real State"
@@ -51,9 +51,12 @@ const Page: React.FC = () => {
               className="h-[70px]"
             />
           </div>
-          <nav className="">
-            <Link href="/app" className="hidden hover:underline">
+          <nav className="flex items-center gap-3">
+            <Link href="/app" className="hidden lg:block hover:underline">
               Propiedades
+            </Link>
+            <Link href="#!" className="hidden lg:block hover:underline">
+              Contacto
             </Link>
 
             <Link href="/login" className="bg-[#2962FF] py-2 px-10 rounded-lg">
@@ -76,7 +79,7 @@ const Page: React.FC = () => {
 
         {/* Property Types */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="flex flex-col gap-3 bg-white p-6 rounded-lg shadow-md">
             <img
               src="https://images.adsttc.com/media/images/5d34/e507/284d/d109/5600/0240/newsletter/_FI.jpg?1563747560"
               alt="Casas"
@@ -86,12 +89,12 @@ const Page: React.FC = () => {
             <p>Encuentra la casa de tus sueños</p>
             <Link
               href={"/app"}
-              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+              className="w-max px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
             >
               Ver más
             </Link>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="flex flex-col gap-3 bg-white p-6 rounded-lg shadow-md">
             <img
               src="https://www.adondevivir.com/noticias/wp-content/uploads/2016/08/depto.jpg"
               alt="Departamentos"
@@ -101,12 +104,12 @@ const Page: React.FC = () => {
             <p>Encuentra las mejores comodidades</p>
             <Link
               href={"/app"}
-              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+              className="w-max px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
             >
               Ver más
             </Link>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="flex flex-col gap-3 bg-white p-6 rounded-lg shadow-md">
             <img
               src="https://img.freepik.com/foto-gratis/hermoso-paisaje-cielo-despejado_23-2149721820.jpg"
               alt="Loteizaciones"
@@ -116,7 +119,7 @@ const Page: React.FC = () => {
             <p>Encuentra donde vivir fácilmente</p>
             <Link
               href={"/app"}
-              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+              className="w-max px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
             >
               Ver más
             </Link>
