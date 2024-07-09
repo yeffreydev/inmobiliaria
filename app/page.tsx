@@ -1,113 +1,149 @@
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-export default function Home() {
+const Page: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div className="bg-gray-100 min-h-screen">
+      {/* Header */}
+      <header className="bg-blue-900 text-white py-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="text-2xl font-bold">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/logo-white.svg"
+              alt="ACCON Real State"
+              width={220}
+              height={180}
+              className="h-[100px]"
             />
-          </a>
+          </div>
+          <nav className="space-x-4">
+            <Link href="/app" className="hover:underline">
+              Propiedades
+            </Link>
+
+            <Link
+              href="/login"
+              className="hover:underline bg-[#2962FF] py-2 px-10 rounded-lg"
+            >
+              Iniciar sesión
+            </Link>
+          </nav>
         </div>
-      </div>
+      </header>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8">
+        {/* Welcome Section */}
+        <section className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-2">Bienvenido a SWIC</h1>
+          <p className="text-lg mb-4">Encuentra fácilmente tu próximo hogar</p>
+          <p className="text-gray-600">
+            Tenemos las mejores opciones para su familia y usted.
           </p>
-        </a>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* Property Types */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="https://images.adsttc.com/media/images/5d34/e507/284d/d109/5600/0240/newsletter/_FI.jpg?1563747560"
+              alt="Casas"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold mb-2">Casas</h2>
+            <p>Encuentra la casa de tus sueños</p>
+            <Link
+              href={"/app"}
+              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+            >
+              Ver más
+            </Link>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="https://www.adondevivir.com/noticias/wp-content/uploads/2016/08/depto.jpg"
+              alt="Departamentos"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold mb-2">Departamentos</h2>
+            <p>Encuentra las mejores comodidades</p>
+            <Link
+              href={"/app"}
+              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+            >
+              Ver más
+            </Link>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="https://img.freepik.com/foto-gratis/hermoso-paisaje-cielo-despejado_23-2149721820.jpg"
+              alt="Loteizaciones"
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h2 className="text-xl font-bold mb-2">Loteizaciones</h2>
+            <p>Encuentra donde vivir fácilmente</p>
+            <Link
+              href={"/app"}
+              className="mt-4 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-700"
+            >
+              Ver más
+            </Link>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        {/* Services */}
+        <section className="bg-white p-8 rounded-lg shadow-md text-center mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <div className="text-blue-900 text-4xl mb-2">🏠</div>
+              <h3 className="text-xl font-bold mb-2">Venta de Propiedades</h3>
+              <p>Encuentra la casa de tus sueños para comprar.</p>
+            </div>
+            <div>
+              <div className="text-blue-900 text-4xl mb-2">💼</div>
+              <h3 className="text-xl font-bold mb-2">Asesoría</h3>
+              <p>Recibe asesoramiento personalizado para tu inversión.</p>
+            </div>
+            <div>
+              <div className="text-blue-900 text-4xl mb-2">🏢</div>
+              <h3 className="text-xl font-bold mb-2">Alquiler</h3>
+              <p>Encuentra las propiedades ideales para alquilar.</p>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* Gallery */}
+        <section className="mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <img
+              src="https://chilepsicologos.cl/wp-content/uploads/2024/04/familia-1-scaledfamiliacrisis-de-familia-scaledfamilias-felices-scaled-1.jpg"
+              alt="Gallery 1"
+              className="w-full h-40 object-cover rounded-md"
+            />
+            <img
+              src="https://bebesonline.es/blog/wp-content/uploads/2015/05/familia-feliz.jpg"
+              alt="Gallery 2"
+              className="w-full h-40 object-cover rounded-md"
+            />
+            <img
+              src="https://www.lanacion.com.ar/resizer/v2/mas-tiempo-en-el-hogar-implica-que-se-viva-mas-la-YY7SJWVLLVGUNK3BLXU5SMH5OA.jpg?auth=be111d027f8e8212f831e675efe74756d97b3aea142bdd577854ad0440e70b53&width=420&height=280&quality=70&smart=true"
+              alt="Gallery 3"
+              className="w-full h-40 object-cover rounded-md"
+            />
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-blue-900 text-white py-4 text-center">
+        <p>
+          © 2024 SWIC Sistema Web Inmobiliario Completo. Todos los derechos
+          reservados.
+        </p>
+      </footer>
+    </div>
   );
-}
+};
+
+export default Page;
