@@ -1,10 +1,44 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { FaBook, FaEye, FaMoon, FaQuestionCircle } from "react-icons/fa";
 
 const Page: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-gray-100 min-h-screen">
+      <div
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="transform -translate-y-1/2  text-white cursor-pointer z-20 flex items-center left-[5px] text-3xl justify-center w-[50px] h-[50px] fixed top-[50%] bg-blue-700 "
+      >
+        <FaEye />
+      </div>
+      {isMenuOpen && (
+        <div
+          className="pl-[65px] flex flex-col gap-5 justify-center text-white  bg-[#131645] bg-opacity-90 w-3/12 h-screen fixed z-10"
+          id=""
+        >
+          <ul className="flex flex-col gap-5">
+            <li className="activo">
+              <a className="flex items-center gap-3" href="#">
+                <FaBook />
+                Modo lectura
+              </a>
+            </li>
+            <li>
+              <a className="flex items-center gap-3" href="#">
+                <FaMoon /> Modo oscuro
+              </a>
+            </li>
+            <li>
+              <a className="flex items-center gap-3" href="#">
+                <FaQuestionCircle /> Ayuda
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
       {/* Header */}
       <header className="bg-blue-900 text-white py-4">
         <div className="container mx-auto flex justify-between items-center">

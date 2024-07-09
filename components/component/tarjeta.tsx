@@ -35,7 +35,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export function Tarjeta() {
   return (
-    <Card className="w-full max-w-[430px]">
+    <Card className="w-full mx-auto max-w-[430px]">
       <CardHeader className="pb-0">
         <img src="/foto1.jpg" />
         <CardTitle className="text-xl font-bold">
@@ -69,7 +69,7 @@ export function Tarjeta() {
       <CardFooter>
         <div className="flex w-full justify-between items-end gap-2">
           <div className="text-2xl font-semibold">S/.28,000</div>
-          <Button className="bg-[#2962FF]">
+          <Button className="bg-[#2962FF] py-2 px-7 rounded-lg text-white">
             <Link href={"/detalles"}>Detalles </Link>
           </Button>
         </div>
