@@ -14,18 +14,15 @@ const Page: React.FC = () => {
               alt="ACCON Real State"
               width={220}
               height={180}
-              className="h-[100px]"
+              className="h-[70px]"
             />
           </div>
-          <nav className="space-x-4">
-            <Link href="/app" className="hover:underline">
+          <nav className="">
+            <Link href="/app" className="hidden hover:underline">
               Propiedades
             </Link>
 
-            <Link
-              href="/login"
-              className="hover:underline bg-[#2962FF] py-2 px-10 rounded-lg"
-            >
+            <Link href="/login" className="bg-[#2962FF] py-2 px-10 rounded-lg">
               Iniciar sesión
             </Link>
           </nav>

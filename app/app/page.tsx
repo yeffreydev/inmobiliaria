@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <ContentDiv>
       <div className="mt-3">
-        <div className="flex py-10 gap-10 items-center">
+        <div className="flex flex-wrap py-10 gap-10 items-center">
           <input
             className="border border-blue-900 p-2 rounded-lg"
             type="text"

@@ -10,7 +10,7 @@ export default function LoginForm() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="flex w-full justify-center items-stretch rounded-lg">
-        <div className="flex flex-col items-center ml-auto bg-white  rounded-l-xl overflow-hidden">
+        <div className="hidden lg:flex flex-col items-center ml-auto bg-white  rounded-l-xl overflow-hidden">
           <Image
             src="/logo.svg"
             alt="ACCON Real State"
@@ -20,7 +20,7 @@ export default function LoginForm() {
           />
           <img src="/ilus.png" alt="Illustration" className="object-contain" />
         </div>
-        <div className="p-10 flex flex-col justify-center bg-white rounded-r-xl w-max mr-auto">
+        <div className="p-10 flex mx-auto lg:mx-0 flex-col justify-center bg-white rounded-r-xl w-max lg:mr-auto">
           <h2 className="mb-6 text-2xl font-bold text-center text-blue-900">
             Iniciar Sesión
           </h2>
