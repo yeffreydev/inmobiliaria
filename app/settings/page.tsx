@@ -1,3 +1,4 @@
+import ContentDiv from "@/components/ContentDiv";
 import React from "react";
 
 const SettingsPage = () => {
@@ -98,4 +99,12 @@ const SettingsPage = () => {
   );
 };
 
-export default SettingsPage;
+const Page = () => {
+  return (
+    <ContentDiv>
+      <SettingsPage />
+    </ContentDiv>
+  );
+};
+
+export default Page;
