@@ -49,6 +49,17 @@ export default function page() {
                 Detalles
               </p>
             </div>
+            <div className="flex flex-col gap-5">
+              <textarea
+                className="border p-1 rounded-lg border-gray-700"
+                name=""
+                placeholder="escribe al dueño..."
+                id=""
+              ></textarea>
+              <button className="bg-[#2962FF] text-lg font-semibold text-white rounded-lg w-max px-7 py-1">
+                Enviar Mensaje
+              </button>
+            </div>
           </div>
         </div>
       </div>
