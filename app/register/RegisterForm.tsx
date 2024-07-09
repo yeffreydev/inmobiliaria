@@ -76,7 +76,11 @@ export default function RegisterForm() {
                 />
               </div>
             </div>
-
+            <div>
+              <p className="text-red-400 text-sm py-1">
+                * Mensaje de error en registro
+              </p>
+            </div>
             <Link
               href={"/app"}
               className="w-full text-center font-bold py-2 mt-4 text-white bg-blue-900 rounded-lg"

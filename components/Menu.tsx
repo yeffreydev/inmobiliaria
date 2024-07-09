@@ -42,8 +42,8 @@ function Menu({ handleclose }: { handleclose: () => void }) {
             Dashboard
           </Link>
         </li>
-        <li className="w-full text-red-400">
-          <Link className="flex items-center p-3 gap-3" href={"#!"}>
+        <li className="w-full">
+          <Link className="flex items-center p-3 gap-3" href={"/settings"}>
             <MdOutlineSettings />
             ajustes
           </Link>

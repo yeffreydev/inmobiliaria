@@ -35,6 +35,7 @@ export default function LoginForm() {
               <div className="relative">
                 <MailIcon className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
+                  required
                   type="email"
                   id="email"
                   placeholder="email"
@@ -52,6 +53,7 @@ export default function LoginForm() {
               <div className="relative">
                 <LockIcon className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
+                  required
                   type="password"
                   id="password"
                   placeholder="contraseña"
@@ -67,6 +69,11 @@ export default function LoginForm() {
               >
                 ¿Olvidaste la contraseña?
               </Link>
+            </div>
+            <div>
+              <p className="text-red-400 text-sm py-1">
+                * Mensaje de error en login
+              </p>
             </div>
             <Link
               href={"/app"}
